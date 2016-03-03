@@ -24,6 +24,7 @@ RSpec.describe TodoListsController, type: :controller do
   # TodoList. As you add validations to TodoList, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
+    { "title" => "MyString", "description" => "My Description"}
     skip("Add a hash of attributes valid for your model")
   }
 

@@ -1,21 +1,13 @@
-<%= form_for(@todo_item) do |f| %>
-  <% if @todo_list.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@todo_list.errors.count, "error") %> prohibited this todo_list from being saved:</h2>
+<div id="error_explanation">
+  <h2><%= pluralize(@todo_item.errors.count, "error") %> prohibited this todo item from being saved:</h2>
 
-      <ul>
-      <% @todo_list.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+  <ul>
+  <% @todo_item.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
   <% end %>
+  </ul>
+</div>
+<%= form.label :content %><br>
+<%= form.text_field :content %>
 
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_field :content %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<%= form.submit "Save"%>

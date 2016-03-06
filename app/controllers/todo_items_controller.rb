@@ -45,10 +45,14 @@ class TodoItemsController < ApplicationController
     end
 
     redirect_to todo_list_todo_items_path
-    # respond_to do |format|
-    #   format.html { redirect_to todo_lists_url, notice: 'Todo item was successfully destroyed.' }
-    #   format.json { head :no_content }
-    # end
+
+  end
+
+  def complete
+    @todo_item = @todo_list.todo_items.find(params[:id])
+    @todo_item.update_attribute(:completed_at, Time.now)
+
+    redirect_to todo_list_todo_items_path, notice: "Todo item marked as complete."
   end
 
   def url_options

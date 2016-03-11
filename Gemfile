@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.5.1'
+gem 'bcrypt', '~> 3.1.11'
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -29,6 +30,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 group :development, :test do
 
   gem 'rspec-rails', '~> 3.4.2'
+  gem 'factory_girl_rails', '~> 4.6.0'
 
 end
 

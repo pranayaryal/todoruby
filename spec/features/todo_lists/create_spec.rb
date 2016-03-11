@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "Creating todo lists" do
-
+  let(:user) { create(:user)}
   def create_todo_list(options={})
     options[:title] ||= "My todo list"
     options[:description] ||= "This is my todo list."
@@ -14,6 +14,11 @@ describe "Creating todo lists" do
     fill_in "Description", with: options[:description]
     click_button "Create Todo list"
   end
+
+  before do
+    sign_in user, password: "treehouse1"
+  end
+
   it "redirects to the todo list index page on success" do
 
     create_todo_list
@@ -47,7 +52,7 @@ describe "Creating todo lists" do
   it "displays an error when the todo list has a no description" do
     expect(TodoList.count).to eq(0)
 
-    create_todo_list title: "Grocyer list",  description: ""
+    create_todo_list title: "Grocery list",  description: ""
 
     expect(page).to have_content("error")
     expect(TodoList.count).to eq(0)

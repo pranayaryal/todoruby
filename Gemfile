@@ -37,6 +37,7 @@ end
 group :test do
 
   gem 'capybara', '~> 2.6.2'
+  gem 'capybara-email', '~> 2.5.0'
   gem 'shoulda-matchers', require: false
 
 end

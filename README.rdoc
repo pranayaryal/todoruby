@@ -5,4 +5,4 @@ It has a 'forgot password?' feature by which it sends a randomly generated token
 
 It allows you to create, read, update and delete todolist items nested inside todo lists.
 
-Twitter Bootstrap is used to make it look better.
+Twitter Bootstrap is used to make it look better and mobile-responsive

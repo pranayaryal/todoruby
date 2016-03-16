@@ -1,1 +1,6 @@
 
+This is a create, read, update and delete application using Ruby on Rails MVC framework. This was created using Test-driven development. It first makes you login or signup and then allows you to create your todolists.
+
+It has a 'forgot password?' feature by which it sends a randomly generated token to your email to which can be clicked to make a new password.
+
+It allows you to create, read, update and delete todolist items nested inside todo lists.
